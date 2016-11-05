@@ -101,7 +101,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Muse',
-    sidebar: {"position":"left","display":"post"},
+    sidebar: {"position":"left","display":"hide"},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -173,6 +173,8 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
             Home
           </a>
         </li>
@@ -180,6 +182,8 @@
         
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             Archives
           </a>
@@ -189,13 +193,27 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
             Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
           </a>
         </li>
       
         
         <li class="menu-item menu-item-schedule">
           <a href="/schedule" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
             
             Schedule
           </a>
@@ -456,7 +474,7 @@
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="/images/avatar.png"
                alt="LincHpin's Blog" />
           <p class="site-author-name" itemprop="name">LincHpin's Blog</p>
           <p class="site-description motion-element" itemprop="description"></p>
@@ -471,10 +489,10 @@
 
           
             <div class="site-state-item site-state-categories">
-              
+              <a href="/categories">
                 <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">categories</span>
-              
+              </a>
             </div>
           
 
@@ -510,7 +528,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#监督学习的应用：梯度下降"><span class="nav-number">1.</span> <span class="nav-text">监督学习的应用：梯度下降</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一些定义："><span class="nav-number">1.0.1.</span> <span class="nav-text">一些定义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习要实现的功能："><span class="nav-number">1.0.2.</span> <span class="nav-text">机器学习要实现的功能：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决步骤："><span class="nav-number">1.0.3.</span> <span class="nav-text">解决步骤：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法讲解"><span class="nav-number">1.0.4.</span> <span class="nav-text">算法讲解:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对步骤的简化："><span class="nav-number">1.0.5.</span> <span class="nav-text">对步骤的简化：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最小二乘法公式推导"><span class="nav-number">1.0.6.</span> <span class="nav-text">最小二乘法公式推导</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#监督学习的应用：梯度下降"><span class="nav-text">监督学习的应用：梯度下降</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一些定义："><span class="nav-text">一些定义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习要实现的功能："><span class="nav-text">机器学习要实现的功能：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决步骤："><span class="nav-text">解决步骤：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法讲解"><span class="nav-text">算法讲解:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对步骤的简化："><span class="nav-text">对步骤的简化：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最小二乘法公式推导"><span class="nav-text">最小二乘法公式推导</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
