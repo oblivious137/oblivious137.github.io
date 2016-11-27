@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/11/27/Machine-Learning-Notes-Ⅴ/index.html">
 <meta property="og:site_name" content="LincHpin">
 <meta property="og:description" content="生成学习算法与贝叶斯平滑">
-<meta property="og:updated_time" content="2016-11-27T12:43:35.619Z">
+<meta property="og:updated_time" content="2016-11-27T13:45:14.255Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Machine-Learning-Notes-Ⅴ">
 <meta name="twitter:description" content="生成学习算法与贝叶斯平滑">
@@ -293,7 +293,7 @@
 
       
         <h1 id="&#x751F;&#x6210;&#x5B66;&#x4E60;&#x7B97;&#x6CD5;"><a href="#&#x751F;&#x6210;&#x5B66;&#x4E60;&#x7B97;&#x6CD5;" class="headerlink" title="&#x751F;&#x6210;&#x5B66;&#x4E60;&#x7B97;&#x6CD5;"></a>&#x751F;&#x6210;&#x5B66;&#x4E60;&#x7B97;&#x6CD5;</h1><p>&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x5B66;&#x4E60;&#x7684;&#x7B97;&#x6CD5;&#x90FD;&#x5C5E;&#x4E8E;&#x5224;&#x522B;&#x5B66;&#x4E60;&#x7B97;&#x6CD5;&#xFF0C;&#x5B83;&#x4EEC;&#x90FD;&#x662F;&#x76F4;&#x63A5;&#x5BF9;P(y|x)&#x8FDB;&#x884C;&#x5EFA;&#x6A21;&#x3002;</p>
-<p>&#x800C;&#x751F;&#x6210;&#x5B66;&#x4E60;&#x7B97;&#x6CD5;&#x5219;&#x662F;&#x7531;&#x8D1D;&#x53F6;&#x65AF;&#x516C;&#x5F0F;$P(y=i|x)=\frac{P(y=i,x)}{P(x)}=\frac{P(x|y=i)<em>P(y=i)}{\sum_{j=1}^{k}{P(x|y=j)</em>P(y=j)}}$&#x5F97;&#x5230;&#x3002;&#x4ED6;&#x628A;$x,y$&#x89C6;&#x4E3A;&#x4E24;&#x4E2A;&#x6709;&#x5173;&#x8054;&#x7684;&#x968F;&#x673A;&#x53D8;&#x91CF;&#xFF0C;&#x901A;&#x8FC7;&#x5BF9;$y$&#x7684;&#x4E0D;&#x540C;&#x53D6;&#x503C;&#x4E0B;&#x7684;$x$&#x5EFA;&#x6A21;&#x6765;&#x5F97;&#x5230;$P(x|y=i)$&#xFF0C;&#x5BF9;$y$&#x7684;&#x76F4;&#x63A5;&#x5EFA;&#x6A21;&#x5F97;&#x5230;$P(y=i)$&#xFF0C;&#x4ECE;&#x800C;&#x8BA1;&#x7B97;&#x51FA;&#x8BA1;&#x7B97;$P(y=i|x)$&#x3002;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x5FC5;&#x987B;&#x5BF9;&#x4E0D;&#x540C;$y$&#x7684;$x$&#x5206;&#x522B;&#x5EFA;&#x6A21;&#xFF0C;&#x8FD9;&#x5C31;&#x8981;&#x6C42;$y$&#x7684;&#x53D6;&#x503C;&#x5FC5;&#x987B;&#x662F;&#x6709;&#x9650;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x751F;&#x6210;&#x5B66;&#x4E60;&#x7B97;&#x6CD5;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x5206;&#x7C7B;&#x3002;</p>
+<p>&#x800C;&#x751F;&#x6210;&#x5B66;&#x4E60;&#x7B97;&#x6CD5;&#x5219;&#x662F;&#x7531;&#x8D1D;&#x53F6;&#x65AF;&#x516C;&#x5F0F;$P(y=i|x)=\frac{P(y=i,x)}{P(x)}=\frac{P(x|y=i)\times P(y=i)}{\sum_{j=1}^{k}{P(x|y=j)\times P(y=j)}}$&#x5F97;&#x5230;&#x3002;&#x4ED6;&#x628A;$x,y$&#x89C6;&#x4E3A;&#x4E24;&#x4E2A;&#x6709;&#x5173;&#x8054;&#x7684;&#x968F;&#x673A;&#x53D8;&#x91CF;&#xFF0C;&#x901A;&#x8FC7;&#x5BF9;$y$&#x7684;&#x4E0D;&#x540C;&#x53D6;&#x503C;&#x4E0B;&#x7684;$x$&#x5EFA;&#x6A21;&#x6765;&#x5F97;&#x5230;$P(x|y=i)$&#xFF0C;&#x5BF9;$y$&#x7684;&#x76F4;&#x63A5;&#x5EFA;&#x6A21;&#x5F97;&#x5230;$P(y=i)$&#xFF0C;&#x4ECE;&#x800C;&#x8BA1;&#x7B97;&#x51FA;&#x8BA1;&#x7B97;$P(y=i|x)$&#x3002;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x5FC5;&#x987B;&#x5BF9;&#x4E0D;&#x540C;$y$&#x7684;$x$&#x5206;&#x522B;&#x5EFA;&#x6A21;&#xFF0C;&#x8FD9;&#x5C31;&#x8981;&#x6C42;$y$&#x7684;&#x53D6;&#x503C;&#x5FC5;&#x987B;&#x662F;&#x6709;&#x9650;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x751F;&#x6210;&#x5B66;&#x4E60;&#x7B97;&#x6CD5;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x5206;&#x7C7B;&#x3002;</p>
 
       
     </div>
