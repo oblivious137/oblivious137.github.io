@@ -87,15 +87,15 @@
 <meta name="description" content="牛顿方法与广义线性模型">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Machine Learning Notes Ⅳ">
-<meta property="og:url" content="http://yoursite.com/2016/11/10/Machine-Learning-Notes-Ⅳ/index.html">
+<meta property="og:url" content="http://yoursite.com/2016/11/10/Machine-Learning-Notes-4/index.html">
 <meta property="og:site_name" content="LincHpin">
 <meta property="og:description" content="牛顿方法与广义线性模型">
-<meta property="og:image" content="http://yoursite.com/2016/11/10/Machine-Learning-Notes-Ⅳ/1.png">
-<meta property="og:updated_time" content="2016-11-16T12:03:12.997Z">
+<meta property="og:image" content="http://yoursite.com/2016/11/10/Machine-Learning-Notes-4/1.png">
+<meta property="og:updated_time" content="2016-11-28T08:32:13.237Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Machine Learning Notes Ⅳ">
 <meta name="twitter:description" content="牛顿方法与广义线性模型">
-<meta name="twitter:image" content="http://yoursite.com/2016/11/10/Machine-Learning-Notes-Ⅳ/1.png">
+<meta name="twitter:image" content="http://yoursite.com/2016/11/10/Machine-Learning-Notes-4/1.png">
 
 
 
@@ -294,7 +294,7 @@
       
 
       
-        <h2 id="Newton-Method"><a href="#Newton-Method" class="headerlink" title="Newton Method"></a>Newton Method</h2><p>&#x725B;&#x987F;&#x65B9;&#x6CD5;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x6C42;&#x51FD;&#x6570;&#x96F6;&#x70B9;&#x3002;<br>&#x5BF9;&#x4E8E;$y=f(\theta)$&#x6765;&#x8BF4;&#xFF0C;&#x57FA;&#x672C;&#x601D;&#x60F3;&#x5C31;&#x662F;&#x5148;&#x5047;&#x8BBE;&#x4E00;&#x4E2A;&#x521D;&#x59CB;&#x89E3;&#xFF0C;&#x6BCF;&#x6B21;&#x6C42;&#x51FA;&#x89E3;&#x6240;&#x5728;&#x4F4D;&#x7F6E;&#x7684;&#x5207;&#x7EBF;&#xFF0C;&#x5C06;&#x89E3;&#x79FB;&#x52A8;&#x5230;&#x5207;&#x7EBF;&#x4E0E;$\theta$&#x8F74;&#x7684;&#x4EA4;&#x70B9;&#x5904;&#x3002;<br><img src="/2016/11/10/Machine-Learning-Notes-&#x2163;/1.png" alt="&#x56FE;&#x7247;&#x52A0;&#x8F7D;&#x5931;&#x8D25;"><br>&#x7531;&#x659C;&#x7387;&#x7684;&#x5B9A;&#x4E49;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x63A8;&#x51FA;$$\begin{align*}<br>f&#x2019;(\theta)&amp;=\frac{f(\theta)}{\Delta} \\<br>\Delta&amp;=\frac{f(\theta)}{f&#x2019;(\theta)} \\<br>\end{align*}$$<br>&#x53C8;&#x56E0;&#x4E3A;$\theta:=\theta-\Delta$&#xFF0C;&#x6240;&#x4EE5;&#x6709;$\theta:=\theta - \frac{f(\theta)}{f&#x2019;(\theta)}$&#x3002;<br>&#x5BF9;&#x4E8E;&#x4E00;&#x90E8;&#x5206;&#x56DE;&#x5F52;&#x6A21;&#x578B;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x628A;&#x6700;&#x5927;&#x5316;&#x5BF9;&#x6570;&#x4F3C;&#x7136;&#x7387;&#x53D8;&#x6210;&#x6C42;&#x5BF9;&#x6570;&#x4F3C;&#x7136;&#x7387;&#x7684;&#x5BFC;&#x6570;&#x7684;&#x96F6;&#x70B9;&#xFF0C;&#x4ECE;&#x800C;&#x4F7F;&#x7528;&#x725B;&#x987F;&#x65B9;&#x6CD5;&#x3002;&#x8FED;&#x4EE3;&#x65B9;&#x5F0F;&#x5C31;&#x662F;$\theta:=\theta-\frac{f&#x2019;(\theta)}{f&#x2019;&#x2019;(\theta)}$&#x3002;<br>&#x5728;&#x4E00;&#x822C;&#x5316;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;$\theta$&#x4F1A;&#x662F;&#x4E00;&#x4E2A;&#x5411;&#x91CF;&#x3002;&#x6240;&#x4EE5;$\theta:=\theta-H^{-1}\nabla_{\theta}I$<br>&#x5176;&#x4E2D;$I$&#x662F;&#x76EE;&#x6807;&#x51FD;&#x6570;&#xFF1B;$H$&#x4E3A;Hessian&#x77E9;&#x9635;&#xFF0C;&#x6EE1;&#x8DB3;$H_{ij}=\frac{\partial^2 I}{\partial \theta_i \partial \theta_j}$&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x5B83;&#x770B;&#x4F5C;&#x662F;&#x4E8C;&#x9636;&#x504F;&#x5BFC;&#x7684;&#x77E9;&#x9635;&#x3002;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x770B;&#x4F5C;$\theta$&#x51CF;&#x53BB;&#x4E00;&#x9636;&#x504F;&#x5BFC;&#x9664;&#x4EE5;&#x4E8C;&#x9636;&#x504F;&#x5BFC;&#x3002;<br>&#x725B;&#x987F;&#x65B9;&#x6CD5;&#x5728;&#x903C;&#x8FD1;&#x89E3;&#x65F6;&#x53EF;&#x4EE5;&#x8FBE;&#x5230;&#x4E8C;&#x6B21;&#x6536;&#x655B;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6BCF;&#x6B21;&#x8FED;&#x4EE3;&#x53EF;&#x4EE5;&#x4F7F;&#x89E3;&#x7684;&#x6709;&#x6548;&#x6570;&#x5B57;&#x52A0;&#x500D;&#x3002;<br>&#x725B;&#x987F;&#x65B9;&#x6CD5;&#x7684;&#x4F18;&#x70B9;&#x5C31;&#x662F;&#x6536;&#x655B;&#x5FEB;&#x3002;&#x4F46;&#x5F53;&#x7279;&#x5F81;&#x6570;&#x76EE;&#x8F83;&#x591A;&#x65F6;&#xFF0C;&#x6C42;Hessian&#x77E9;&#x9635;&#x7684;&#x9006;&#x4F1A;&#x6BD4;&#x8F83;&#x8017;&#x8D39;&#x65F6;&#x95F4;&#x3002;</p>
+        <h2 id="Newton-Method"><a href="#Newton-Method" class="headerlink" title="Newton Method"></a>Newton Method</h2><p>&#x725B;&#x987F;&#x65B9;&#x6CD5;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x6C42;&#x51FD;&#x6570;&#x96F6;&#x70B9;&#x3002;<br>&#x5BF9;&#x4E8E;$y=f(\theta)$&#x6765;&#x8BF4;&#xFF0C;&#x57FA;&#x672C;&#x601D;&#x60F3;&#x5C31;&#x662F;&#x5148;&#x5047;&#x8BBE;&#x4E00;&#x4E2A;&#x521D;&#x59CB;&#x89E3;&#xFF0C;&#x6BCF;&#x6B21;&#x6C42;&#x51FA;&#x89E3;&#x6240;&#x5728;&#x4F4D;&#x7F6E;&#x7684;&#x5207;&#x7EBF;&#xFF0C;&#x5C06;&#x89E3;&#x79FB;&#x52A8;&#x5230;&#x5207;&#x7EBF;&#x4E0E;$\theta$&#x8F74;&#x7684;&#x4EA4;&#x70B9;&#x5904;&#x3002;<br><img src="/2016/11/10/Machine-Learning-Notes-4/1.png" alt="&#x56FE;&#x7247;&#x52A0;&#x8F7D;&#x5931;&#x8D25;"><br>&#x7531;&#x659C;&#x7387;&#x7684;&#x5B9A;&#x4E49;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x63A8;&#x51FA;$$\begin{align*}<br>f&#x2019;(\theta)&amp;=\frac{f(\theta)}{\Delta} \\<br>\Delta&amp;=\frac{f(\theta)}{f&#x2019;(\theta)} \\<br>\end{align*}$$<br>&#x53C8;&#x56E0;&#x4E3A;$\theta:=\theta-\Delta$&#xFF0C;&#x6240;&#x4EE5;&#x6709;$\theta:=\theta - \frac{f(\theta)}{f&#x2019;(\theta)}$&#x3002;<br>&#x5BF9;&#x4E8E;&#x4E00;&#x90E8;&#x5206;&#x56DE;&#x5F52;&#x6A21;&#x578B;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x628A;&#x6700;&#x5927;&#x5316;&#x5BF9;&#x6570;&#x4F3C;&#x7136;&#x7387;&#x53D8;&#x6210;&#x6C42;&#x5BF9;&#x6570;&#x4F3C;&#x7136;&#x7387;&#x7684;&#x5BFC;&#x6570;&#x7684;&#x96F6;&#x70B9;&#xFF0C;&#x4ECE;&#x800C;&#x4F7F;&#x7528;&#x725B;&#x987F;&#x65B9;&#x6CD5;&#x3002;&#x8FED;&#x4EE3;&#x65B9;&#x5F0F;&#x5C31;&#x662F;$\theta:=\theta-\frac{f&#x2019;(\theta)}{f&#x2019;&#x2019;(\theta)}$&#x3002;<br>&#x5728;&#x4E00;&#x822C;&#x5316;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;$\theta$&#x4F1A;&#x662F;&#x4E00;&#x4E2A;&#x5411;&#x91CF;&#x3002;&#x6240;&#x4EE5;$\theta:=\theta-H^{-1}\nabla_{\theta}I$<br>&#x5176;&#x4E2D;$I$&#x662F;&#x76EE;&#x6807;&#x51FD;&#x6570;&#xFF1B;$H$&#x4E3A;Hessian&#x77E9;&#x9635;&#xFF0C;&#x6EE1;&#x8DB3;$H_{ij}=\frac{\partial^2 I}{\partial \theta_i \partial \theta_j}$&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x5B83;&#x770B;&#x4F5C;&#x662F;&#x4E8C;&#x9636;&#x504F;&#x5BFC;&#x7684;&#x77E9;&#x9635;&#x3002;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x770B;&#x4F5C;$\theta$&#x51CF;&#x53BB;&#x4E00;&#x9636;&#x504F;&#x5BFC;&#x9664;&#x4EE5;&#x4E8C;&#x9636;&#x504F;&#x5BFC;&#x3002;<br>&#x725B;&#x987F;&#x65B9;&#x6CD5;&#x5728;&#x903C;&#x8FD1;&#x89E3;&#x65F6;&#x53EF;&#x4EE5;&#x8FBE;&#x5230;&#x4E8C;&#x6B21;&#x6536;&#x655B;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6BCF;&#x6B21;&#x8FED;&#x4EE3;&#x53EF;&#x4EE5;&#x4F7F;&#x89E3;&#x7684;&#x6709;&#x6548;&#x6570;&#x5B57;&#x52A0;&#x500D;&#x3002;<br>&#x725B;&#x987F;&#x65B9;&#x6CD5;&#x7684;&#x4F18;&#x70B9;&#x5C31;&#x662F;&#x6536;&#x655B;&#x5FEB;&#x3002;&#x4F46;&#x5F53;&#x7279;&#x5F81;&#x6570;&#x76EE;&#x8F83;&#x591A;&#x65F6;&#xFF0C;&#x6C42;Hessian&#x77E9;&#x9635;&#x7684;&#x9006;&#x4F1A;&#x6BD4;&#x8F83;&#x8017;&#x8D39;&#x65F6;&#x95F4;&#x3002;</p>
 <h2 id="Generalized-Linear-Models"><a href="#Generalized-Linear-Models" class="headerlink" title="Generalized Linear Models"></a>Generalized Linear Models</h2><p>&#x76EE;&#x524D;&#x5DF2;&#x6709;&#x7684;&#x4E24;&#x79CD;&#x5EFA;&#x6A21;&#x601D;&#x8DEF;&#xFF1A;</p>
 <ol>
 <li>$y\in \mathbb{R}$&#xFF0C;&#x6211;&#x4EEC;&#x5047;&#x8BBE;$y$&#x6EE1;&#x8DB3;&#x9AD8;&#x65AF;&#x5206;&#x5E03;&#xFF0C;&#x4ECE;&#x800C;&#x5F97;&#x5230;&#x4E86;&#x57FA;&#x4E8E;&#x6700;&#x5C0F;&#x4E8C;&#x4E58;&#x7684;&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x3002;</li>
@@ -351,7 +351,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/04/Machine-Learning-Notes-Ⅲ/" rel="next" title="Machine Learning Notes Ⅲ">
+              <a href="/2016/11/04/Machine-Learning-Notes-3/" rel="next" title="Machine Learning Notes Ⅲ">
                 <i class="fa fa-chevron-left"></i> Machine Learning Notes Ⅲ
               </a>
             
@@ -359,8 +359,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/11/27/Machine-Learning-Notes-Ⅴ/" rel="prev" title="Machine-Learning-Notes-Ⅴ">
-                Machine-Learning-Notes-Ⅴ <i class="fa fa-chevron-right"></i>
+              <a href="/2016/11/27/Machine-Learning-Notes-5/" rel="prev" title="Machine Learning Notes Ⅴ">
+                Machine Learning Notes Ⅴ <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
